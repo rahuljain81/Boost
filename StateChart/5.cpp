@@ -7,8 +7,26 @@
 
 namespace sc = boost::statechart;
 
-struct EvStartStop : sc::event< EvStartStop > {};
-struct EvReset : sc::event< EvReset > {};
+struct EvStartStop : sc::event< EvStartStop > {
+	EvStartStop()
+	{ 
+		std::cout << __FUNCTION__<< std::endl;
+	}
+	~EvStartStop()
+	{ 
+		std::cout << __FUNCTION__<< std::endl;
+	}
+};
+struct EvReset : sc::event< EvReset > {
+	EvReset()
+	{ 
+		std::cout << __FUNCTION__<< std::endl;
+	}
+	~EvReset()
+	{ 
+		std::cout << __FUNCTION__<< std::endl;
+	}
+};
 
 struct IElapsedTime
 {
